@@ -1,0 +1,49 @@
+.welcome-header {
+  margin: 90px 0px;
+  text-align: center;  /* h1, p 같은 text 용 tag 들은 보통 text-align 을 통해 정렬 */
+  display: flex;
+  flex-direction: column;  /* title 과 text 를 세로로 위치시키기 위함 */
+  align-items: center;
+}
+.welcome-header__title {
+  margin-bottom: 40px;
+  font-size: 25px;
+}
+.welcome-header__text {
+  width: 60%;  /* 두 줄로 만들기 위해 전체 가로축에서 60%만 먹게함. */
+  opacity: 0.7;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;  /* 내부 input 들을 세로로 정렬하기 위함 */
+  margin: 0px 30px;
+}
+/* 아래 selector 들 대신 login-form__input, login-form__btn, login-form__a 식으로 지정해도 됨 */
+#login-form input { /* form 내부 전체 input 들에 대해 한 번에 설정 */
+  border: none; /* input 들에 설정된 border 를 날림 */
+  padding: 15px 0px;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+#login-form input:not([type="submit"]) {  /* form 내부 전체 input 중 submit type 인 input 이 아닌 경우에만 스타일 적용 */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);  /* 아래쪽에만 투명도 0.2 으로 해서 라인 생성 */
+  transition: border-color 0.3s ease-in-out;  /* input 의 state 가 변경되면 내가 설정한 border-color 색이 0.3 에 걸쳐 바뀌도록 애니메이션 */
+}
+#login-form input::placeholder {  /* pseudo element selector 를 이용하여, input 들의 placeholder 들에만 적용할 스타일 */
+  color: rgba(0, 0, 0, 0.4);  /* placeholder 의 text 들은 투명도가 낮으면 rgba 를 통해 투명도 낮춤 */
+}
+#login-form input:focus {  /* state selector 사용 */
+  outline: none;   /* input 에 대해, 선택되어도 outline 이 보이지 않도록 제거 */
+  border-color: var(--yellow);  /* input 이 선택되면, 위에서 설정한 border-bottom 의 색을 내가 재지정한 yellow 변수 색으로 변경 */
+}
+#login-form input[type="submit"] {  /* attribute selector 사용 */
+  background-color: var(--yellow);
+  cursor: pointer;  /* submit 위로 커서 올라왔을 때 커서를 pointer 형식으로 변경. not-allowed, progress 등 다양한 옵션 있음 */
+  padding: 20px 0px;
+  border-radius: 5px;
+}
+#login-form a {
+  text-align: center;
+  font-size: 13px;
+}

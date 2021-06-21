@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Source+Sans+Pro:wght@200&display=swap');
+
+@import "reset.css";
+@import "variables.css";
+
+/* Components */
+@import "components/status-bar.css";
+@import "components/nav-bar.css";
+@import "components/screen-header.css";
+@import "components/alt-screen-header.css";
+@import "components/user-component.css";
+@import "components/badge.css";
+@import "components/icon-row.css";
+
+/* Screen */
+@import "screens/login.css";
+@import "screens/friends.css";
+@import "screens/find.css";
+@import "screens/more.css";
+@import "screens/settings.css";
+@import "screens/chat.css";
+
+/* styles.css 에는 모든 스크린에 적용될 수 있는 스타일을 두는 게 좋음.  Ex) font-family, 모든 스크린의 background-color */
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #2e363e;
+}
+
+.main-screen {
+  padding:0px var(--horizontal-space);
+}

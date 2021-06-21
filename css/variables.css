@@ -1,0 +1,6 @@
+:root {   /* root 요소(문서 전체에 적용됨)에 아래 변수들을 추가 */
+  --yellow: #fae100;  /* 전역에 걸쳐 나만의 variable 생성 */
+  --horizontal-space: 25px;
+  --main-border: 1px solid rgba(0, 0, 0, 0.3);
+  --main-gray: rgba(0, 0, 0, 0.5);
+}

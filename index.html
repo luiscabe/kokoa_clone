@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to Kokoa Clone</title>
+</head>
+<body>
+<div class="status-bar">
+  <div class="status-bar__column">
+    <span>No Service</span>
+      <i class="fas fa-wifi"></i>
+  </div>
+  <div class="status-bar__column">
+    <span>18:43</span>
+  </div>
+  <div class="status-bar__column">
+    <span>110%</span>
+    <i class="fas fa-battery-full fa-lg"></i>
+    <i class="fas fa-bolt"></i>
+  </div>
+</div>
+
+<header class="welcome-header">
+  <h1 class="welcome-header__title">Welcome to Kokoa Clone</h1>
+  <p class="welcome-header__text">
+    If you have a Kokoa Account, log in with your email or phone number.
+  </p>
+</header>
+
+<!-- action : 어떤 페이지로 데이터를 보낼지 지정. method : POST or GET 등 데이터를 보낼 방법을 지정 -->
+<!-- get 으로 보내면, form 에 작성한 내용이 URL 에 적히게 된다 -->
+<form action="friends.html" method="get" id="login-form">
+  <input type="text" placeholder="Email or phone number" />
+  <input type="password" placeholder="Password" />
+  <input type="submit" value="Log In" />
+  <a href="#">Find Kokoa Account or Password</a>
+</form>
+
+<script src="https://kit.fontawesome.com/6478f529f2.js"
+        crossorigin="anonymous">
+</script>
+</body>
+
+</html>

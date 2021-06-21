@@ -1,0 +1,63 @@
+.user-component {
+  justify-content: space-between;
+}
+
+.user-component,  /* 한 클래스에 대한 스타일을 한 곳에서 지정할 필요 X */
+.user-component__column:first-child {  /* 여러 클래스 지정하여 한 번에 스타일 적용 */
+  display: flex;
+  align-items: center;
+}
+
+.user-component__avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 30px;
+  margin-right: 20px;
+}
+
+.user-component__title {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.user-component__subtitle {
+  margin-top: 8px;
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.user-component__subtitle__mark {
+  display: inline-block;
+  color: red;
+  width: 15px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px red solid;
+}
+
+.user-component__avatar--xl {
+  width: 80px;
+  height: 80px;
+}
+
+.user-component__avatar--sm {
+  width: 60px;
+  height: 60px;
+  border-radius: 25px;
+}
+
+.user-component__title--not-bold {
+  font-weight: 400;
+}
+
+.user-component__column:last-child {
+  color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.user-component__time {
+  margin-bottom: 10px;
+  display: block;
+}

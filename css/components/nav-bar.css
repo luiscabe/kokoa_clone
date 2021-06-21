@@ -1,0 +1,36 @@
+.nav {
+  position: fixed;  /* 스크롤 상관없이 항상 동일한 자리에 있도록 고정 */
+  bottom: 0;  /* nav-bar 를 아래에 붙어있도록 */
+  width: 100%;
+  background-color: #f9f9fa;
+  padding: 20px 50px;
+  box-sizing: border-box;  /* padding 을 줘도 이에 맞춰 box size 까지 자동으로 늘리지는 말 것을 지시  Ex) width: 200px; padding-left 50px -> total 250(X) 200 px(O)*/
+  border-top: 1px solid rgba(121, 121, 121, 0.3);
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+.nav__link {
+  position: relative;  /* 말풍선의 1을 우측 상단으로 올리기위해, 부모 container 를 relative 로 선언 */
+  color: #2e363e;
+}
+.nav__notification {
+  position: absolute;  /* 말풍선의 1을 우측 상단으로 올리기위해, 자신을 absolute 로 선언 */
+  left: 15px;
+  bottom: 15px;
+}
+.nav__more {
+  background-color: tomato;
+  width: 6px;
+  height: 6px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  position: absolute;
+  top: -10px;
+  right: 0px;
+}
