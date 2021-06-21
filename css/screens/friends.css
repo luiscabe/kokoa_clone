@@ -25,3 +25,27 @@
   justify-content: space-between;
   color: rgba(0,0,0,0.5);
 }
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;  /* 마우스에 걸리지 않도록 사라짐. 단 element 가 무시될 뿐 여전히 html element 가 여전히 존재함 */
+  }
+}
+
+#splash-screen {
+  background-color: var(--yellow);
+  position: absolute; /* body 기준으로 정렬되긴 원하므로, 따로 relative 지정 X */
+  width: 100vw; /* 화면 너비의 100% */
+  height: 100vh; /* 화면 높이의 100% */
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 132px;
+  animation: hideSplashScreen 0.4s ease-in-out forwards;  /* forwards : last property(= last keyframe 값 = to 의 설정값)를, animation 끝나고도 from 으로 돌아가지 않고 유지된다 */
+  animation-delay: 2s;
+}
