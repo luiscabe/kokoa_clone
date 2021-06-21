@@ -99,3 +99,22 @@
 .open-post__heart-count span {
   margin-left: 3px;
 }
+
+@keyframes heartBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(1.5);
+  }
+  100% {
+    color: white;
+  }
+}
+
+.open-post__heart-count:hover i {  /* 마우스가 open-post__heart-count 의 어느 영역에 올라가도, 아이콘 영역에서만 애니메이션 동작 */
+  will-change: transform;  /* 이게 변하는지 확실하다고 브라우저에 미리 말해줌. 브라우저는 그래픽카드를 이용해 애니매이션을 가속화 */
+  animation: heartBeat 1s linear infinite;
+}
